@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally K Food And Spice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8b1e1e;
+    background-image: url("./1000038612.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background: url('') repeat;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% { top: -20px; }
+    100% { top: 100%; }
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffb38a;
+}
+
+
+.hero {
+    padding: 150px 20px;
+    text-align: center;
+    background: rgba(139, 30, 30, 0.6);
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ffb38a;
+    color: #8b1e1e;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+
+.content {
+    padding: 60px 20px;
+    margin: 30px 10px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+
+.slider {
+    display: flex;
+    overflow: auto;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.slide {
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    width: 80px;
+    height: 260px;
+}
+
+.slide img {
+    width: 280px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+.slide:hover {
+    transform: scale(1.1);
+}
+
+
+#cart-items {
+    margin: 20px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffb38a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+#voice-search {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#voice-output {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: white;
+}
+img{
+    height: 90px;
+    width: 250px;
+}
+  </style>
+
+    <nav id="navbar">
+        <div class="logo">Sally K</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Spices</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cart">Cart</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <h1 class="fade-in">Sally K Food And Spice</h1>
+        <p class="fade-in">Authentic spices that bring your food to life.</p>
+        <button class="btn" onclick="showMessage()">Click Me</button>
+        <p id="message" class="hidden pop-up">You have amazing taste in spices! 🌶️</p>
+    </header>
+
+ 
+    <div class="particles"></div>
+       
+
+ 
+    <section id="products" class="content">
+        <h2>Our Spices</h2>
+        <div class="slider">
+                        <div class="slide">
+                <img src="./1000184494.jpg" alt="Spice Image">
+                <p>Chili Powder</p>
+            </div>
+            <div class="slide">
+                <img src="./1000184226.jpg" alt="Curry Mix">
+                <p>Curry Mix</p>
+            </div>
+                             <div class="slide">
+                <img src="./1000038612.jpg" alt="Jollof rice">
+                <p>Meat sause</p>
+            </div>
+                  <div class="slide">
+                <img src="./1000069348.jpg" alt="Garlic Blend">
+                <p>And many Lovable Foods</p>
+            </div>
+                             <div class="slide">
+                <img src="./1000000181.jpg" alt="Apertizers,chicken,suya and dessert">
+                <p></p>
+            </div>
+                  <div class="slide">
+                <img src="./1000267756.jpg" alt="Sphagetti">
+                <p>Natural Pot combo</p>
+            </div>
+            <div class="slide">
+                <img src="./garlic.jpg" alt="Ginger Spice">
+                <p>Ginger Spice</p>
+            </div>
+            
+                       <div class="slide">
+                <img src="./1000442187.jpg" alt="Garlic Blend">
+                <p>And Many more contact us on:08165884732</p>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+      <section id="products" class="content">
+        <h2>Our Lovable foods</h2>
+        <div class="slider">
+                        <div class="slide">
+                <img src="./jollof rice 2.jpg" alt="Spice Image">
+                <p>Hot Rice</p>
+            </div>
+            <div class="slide">
+                <img src="./rice.jpg" alt="Curry Mix">
+                <p>Healthy Foods</p>
+            </div>
+                             <div class="slide">
+                <img src="./chicken.jpg" alt="Jollof rice">
+                <p>Chicken</p>
+            </div>
+                  <div class="slide">
+                <img src="./masa.jpg" alt="Garlic Blend">
+                <p>Masa and Stew</p>
+            </div>
+                             <div class="slide">
+                <img src="./1000000176.jpg" alt="Apertizers,chicken,suya and dessert">
+                <p>yoghurt</p>
+            </div>
+                  <div class="slide">
+                <img src="./spaghetti.jpg" alt="Sphagetti">
+                <p>Sphagetti</p>
+            </div>
+            <div class="slide">
+                <img src="./fried rice.jpg" alt="Ginger Spice">
+                <p>Fried Rice</p>
+            </div>
+                       <div class="slide">
+                <img src="./jollof rice 2.jpg" alt="Garlic Blend">
+                <p>And Many more contact us on:08165884732</p>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="cart" class="content">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+    </section>
+
+ 
+    <section id="about" class="content">
+        <h2>About Us</h2>
+        <p>
+            At Sally K Food and Spice, we bring you the finest blends made with love and tradition.
+            Get your food and spices any in Nigeria. Get the prices by texting 08165884732,To get more inquiries
+            Follow us on 📘 Facebook:;salimatadejoh   
+              📸 Instagram: ;sallykfoods
+            🎵 TikTok: 🎵;sallykfoods_spices
+            Whatsapp📱: 08165884732
+            📧 Email: ✉️:salimatadejoh@gmail.com
+         
+        </p>
+        <p>
+            
+
+🌟🌶️👋 Hello Amazing Customer! 👋🌶️🌟
+
+Get ready to spice up your kitchen with Sally K Food and Spices — your number-one stop for bold flavors, fresh ingredients, and unforgettable taste! 😍🍽️🔥
+
+At Sally K, we bring you the magic of authentic spices 🌿🌍, quality food products 🍅🥔, and mouth-watering blends that turn every dish into a celebration! 🎉😋
+
+Why Everyone Loves Sally K 😍👇
+🌶️ Premium spices full of aroma
+🍛 Rich, irresistible flavors
+💰 Great prices for top quality
+🛒 Fresh & carefully selected products
+🤝 Friendly service with a smile
+✨ A taste experience like no other!
+
+Whether you're cooking for family 👨‍👩‍👧‍👦, hosting guests 🥳, or exploring new recipes 🥘, our spices will make every bite unforgettable! 🤩💥
+
+Come visit us today and bring the flavor home!
+Sally K Food and Spices — Where Every Flavor Tells a Story! 🌟🍽️❤️
+
+Thank you for being part of the Sally K family! 🙏💖
+
+Warmest regards,
+💫 The Sally K Food and Spices Team 💫
+        </p>
+    </section>
+
+   
+    <div id="voice-search">
+        <button onclick="startVoiceSearch()">🎙️ Search by Voice</button>
+        <p id="voice-output"></p>
+    </div>
+
+<script>
+  
+
+
+
+
+function showMessage() {
+    const msg = document.getElementById("message");
+    if (msg.classList.contains("hidden")) {
+        msg.classList.remove("hidden");
+    } else {
+        msg.classList.add("hidden");
+    }
+}
+
+
+let cart = [];
+function addToCart(item) {
+    cart.push(item);
+    updateCart();
+}
+
+function updateCart() {
+    const cartItemsDiv = document.getElementById("cart-items");
+    cartItemsDiv.innerHTML = cart.join('<br>');
+}
+
+function clearCart() {
+    cart = [];
+    updateCart();
+}
+
+
+function startVoiceSearch() {
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = 'en-US';
+}
+    recognition.start();
+
+    recognition.onresult = function(event) {
+    }
+
+  </script>
+
+</body>
+</html>
+
